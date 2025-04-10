@@ -1,0 +1,255 @@
+《自选外教_24h》使用说明书
+
+一、简介
+该软件为python开发，主要适用于win10电脑，应该适用于win11，但需要自行测试。其它电脑系统，需要使用虚拟机，我使用的为Oracle VM VirtualBox 7.0，当前有7.1版，网址为：https://www.virtualbox.org/wiki/Download（可自行下载，其它版本需自行查找）。需要自备ISO系统文件。
+
+原则上适合多版本，只要是openAI的开源语音识别模型whisper2024年9月版支持的语言，均可使用，软件上有列出，也可自行搜索核对。但字幕生成功能实际只调试了英语，不同语言的缩写字幕不同，需要编辑字幕时，可自行搜索后编辑。具体位置需在菜单栏查找。
+
+音频操作方面，具有跟读、单句重复任意次数、单曲重复任意次数、上一段、下一段、重复本段、上一曲、下一曲等功能。
+
+内含字幕生成、字幕编辑、图片格式转换、截屏、录屏、录音工具。其中“字幕编辑”在下方麦克风/喇叭图标右侧，是文本图标。其余在菜单栏中。
+
+同时包含学习资源，有默认资源，可自行添加资源网址，但默认资源需要查看所有“思考”题后才能设置是否显示。
+
+二、详细说明：
+1、菜单栏：点击可查看相关内容
+
+2、屏幕隐藏按钮：左侧或右侧区域。
+
+3、添加和播放文件：点击待选列表和播放列表，可以显示对应的按钮，该部分功能区分不够详细，但可以使用。
+（1）添加：可添加音频文件夹，但只能是单层父文件夹，多层文件夹功能后续再考虑完善。
+（2）移除：选择文件夹后可移除。
+（3）右键：可看到播放和添加功能。其中只播放该文件夹，会清除播放列表中的旧文件，确保只播放该文件夹的内容，避免混乱。自行取舍。
+（4）播放列表的按钮，点击即可知道功能。
+
+4、媒体显示区：
+音频模式下，该区域将以字幕显示为主；视频模式下将显示视频。
+5、字幕显示区：参考媒体显示区。
+6、操作按钮区：
+
+以上第一行，为快进、快退和进度条，点击可实现快退或快进功能。
+第二行左侧为上一曲、播放/暂停、停止、下一曲；右侧为顺序播放、单曲循环、列表循环。
+第三行：
+（1）普通模式/跟读模式换按钮——显示麦克风则为跟读模式，如上。
+（2）字幕编辑按钮：可以编辑字幕的时间和内容，主要格式必须严格对应。时间格式为——时：分：秒 毫秒（1000毫秒等于1秒，因此毫秒部分时3位数）。
+（3）关闭录音：在跟读模式下，勾选后则只播放，不录音。
+（4）只识别不播放：在跟读模式下，勾选后则不播放自己跟读时的音频，只显示识别结果。
+（5）上一段：该段落由字幕的时间分段来确定。如果分段按句子分，则为上一句，若一个段落里含多句，则也会包含多句。具体由生成的字幕时间，以及后续自己手动调整的时间来确定。
+（6）重复本段、下一段都是播放控制的。测试即可。由于时间等原因，这些按钮可能引发部分使用错误，整体上可以使用，后续再改进。
+
+第四行：曲循环：指单曲循环次数，自行输入；段循环指跟读时单段循环次数。右侧为音量调节。
+
+三、特别说明：
+在学习资源中，涉及几十条关于教育、历史、心理学的一些粗浅思考，请慎重参考，不必当真，仅供参考，觉得不足，欢迎一起完善补充迭代。实在觉得不满意，也欢迎自行迭代，开源网站上已提供基础版代码，不必从零开始，即可参考完善，但注意，发布需要开源完整代码，而且禁止商用。详见使用协议，以及开源库的协议，所有使用需遵循开源库的协议，该软件的授权范围仅代表自身代码，不代表开源库。
+
+四、语音识别模型说明：
+使用了openAI的开源语言模型whisper，默认为base版，若需要识别更准确，可自行下载其它版本，模型尺寸越大（所占空间越大），越可靠，但英语使用base版即可，识别不准，主要不是软件不好，是自行发音需要多练习，但也不必苛求自己的语音，能听懂能交流才是重点。老外说中文的口音照样很明显，人无完人，有些习惯是难以改变的。本软件和openAI公司无关，只是使用了其模型而已，所有使用者，需要自行遵守其使用协议，不得有违约违法行为，若有，责任自负。
+
+
+五、翻译API说明：
+当前翻译时，仅调试了百度API，需要自行到百度翻译API网站注册，然后可以免费使用一定的额度。其它公司的API需自行测试，主要是当前内部代码不确定是否支持。本软件和百度公司无关，只是使用了其API而已，所有使用者，需要自行遵守百度公司的API使用协议，不得有违约违法行为，若有，责任自负。
+
+六、截屏、录屏、录音功能的用途，自行探索。当前该页面的录音识别功能可能无法正常使用，后续0.1.0版再考虑改进，页面颜色当前也无法自行设置；有需要请自行迭代，或等待后续版本的改进。
+
+七、追加肤浅的思考问题：
+1、请问是希望在乎的人，遇到敢于愚昧懦弱的老师，还是希望遇到乐于追求智慧勇敢的老师？
+2、请问是希望在乎的人，走错了都能遇到智慧勇敢真诚的人，还是遇到愚昧懦弱虚伪的人？
+3、请问怎样才能让在乎的人走错了都能一段哦更多智慧勇敢真诚的人？通过传播先进的教育理念和方法，全面进行教育、培训、实践、训练将其改变，是不是最好的方式？
+4、请问让看上去各种不可救药的人，学习脑科学和心理学、编程，从而提升他们的孩子、孙子的认知和思维能力，是不是也能变相地让自己在乎的人的环境、遇到的人更好？
+5、请在希望在乎的人好时，考虑将目光放远到50年、100年、1000年、10000年，也许无法改变什么，但人生短暂，总该为在乎的人稍微多做一些，否则，又何谈真正在乎他们呢？改变自己很难，改变别人更能，但这不是顺其自然破罐子破摔，然后任由在乎的人也许某一天深陷其中的理由。
+
+附录：
+
+【主要功能】
+                    - 音频和视频播放——请自行准备音频和视频，各支持种格式，但当前只测试了MP3、WAV和MP4。
+                    - 字幕同步显示——请自行准备字幕，有字幕生成工具，但需要手动调试时间，已内置编辑页面。
+                    - 跟读练习模式——有语音识别功能，当前使用openAI的whisper模型，内置tiny版，可在云盘自行下载其它版本，实际base对标准英语口语识别很好，发音不准应多练习。
+                    - 语音识别评分
+                    - 学习资源管理——可自行添加重要的学习资源网站。
+                    - 其它功能请自行探索。
+
+                    - 希望助力每个真诚友好，愿意为在乎的人学习、努力的人，为其在乎的人，打造智慧勇敢、真诚友好、健康快乐的环境
+
+【安装方式】：
+将exe文件和完整的_internal文件，下载到自己想要运行的目录，自行查杀病毒——同时要小心误报。
+确认可以运行和，双击exe文件即可运行，或右键-以管理员身份运行，需要完整功能，需要管理员身份。
+开发者承诺绝不会主动给该软件注入任何病毒或其它危险代码。
+但能力有限，无法绝对阻止电脑上或网络里的病毒，因此自行查杀，并小心误报。
+python程序容易被误报为病毒，只允许从开发者的网盘直接下载，以减少风险。分享时，也只允许分享开发者的网盘链接。
+
+注意1：第一次添加音频后，点击播放，可能直接退出，再次运行即可。计划在下一版修复该功能。
+注意2：当前只支持文件夹下即音频或视频文件，不支持多级文件夹格式。计划在下一版修复该功能。
+
+【使用方法】
+一、对于无关闭按钮的窗口，点窗口外即可自动关闭
+二、可以自行切换音频模型，为OpenAI的whisper模型。
+三、翻译主要测试了百度的API，其它产品待测试。
+四、本软件只是接入了部分品牌的产品，当前和相关品牌无任何其它关联关系，
+使用时，务必遵守相关产品的使用原则，用户的一切违规行为由用户自行承担。
+若相关API或模型调整，或其它原因导致软件无法正常使用，
+开发者将考虑尽快修复调整，但不承诺，且不对损失负责。
+如果因为黑客等利用本软件进行病毒传播，
+开发者承诺全力协助用户和司法单位追查，但不为此承担责任。
+
+五、当前不支持界面颜色自定义，计划下一版本提供该设置功能。但可以自行更换部分按钮图标，见icons文件夹，
+只支持png格式，可以通过软件自带的图片转换工具抓获。图片太大时，可先转换成大尺寸的ico图标，再转png格式，
+但为了减少病毒传播，禁止任何人将个人的任何图标或文件，放入软件进行传播，此类传播一律视为恶意商业行为，
+协议中已明确提交补偿和举报奖励。只允许分享本软件的实际下载链接。
+
+
+【适用系统】
+1、当前只调试了win10系统，预计支持win11，需自行测试。
+2、其它电脑系统可安装win10虚拟机，需要设置显示器的3D加速，已测试win10版有效。
+
+
+【问题追加】
+应该努力让自己和在乎的人，被智慧勇敢真诚友好的人包围着，还是被愚昧狡诈的包围着？？怎么做？？
+
+【软件更新】
+当前只在云盘存放新旧版本的软件，不提供自动更新功能。请自行注意。
+
+【卸载该软件的步骤】：
+一、确认截屏录屏默认目录下，还需要的文件，已复制保存；
+不知道目录，可以打开截屏工具查看，
+默认为系统盘下，用户名下的某个文件夹，通常含player字样，
+需自行检查确认。如果自己另行设置了截屏存储目录，
+默认不会清除，但为了保险起见，请复制保存后再清除。
+
+二、打开软件主界面，进入”设置“页面，
+单击”清空所有配置“，该按钮和比“清空临时文件”更彻底，
+这将清空所有配置，但需要检查自己配置的API账号，
+确保清除不余留，以防忘记而被盗用。
+
+三、删除本软件的exe文件和同目录下的_internal文件夹，
+即，如果无自己保存的其它文件。注意：
+不要在该文件夹同级目录下存放其它文件，以防误删。
+
+删除后，用系统清理软件再清理一下即可。
+
+Software User Manual
+
+**"Self-Selected Foreign Tutor_24h" User Manual**
+
+**I. Introduction**
+
+This software is developed in Python, primarily for Windows 10 computers, and should be compatible with Windows 11, but requires user testing. For other operating systems, a virtual machine is needed. I use Oracle VM VirtualBox 7.0; version 7.1 is currently available at: https://www.virtualbox.org/wiki/Download (downloadable directly; other versions need to be searched for). You need to provide your own ISO system file.
+
+In principle, it supports multiple languages supported by OpenAI's open-source speech recognition model Whisper (September 2024 version). The supported languages are listed in the software or can be verified by searching online. However, the subtitle generation function has only been tested for English. Subtitle abbreviations differ for various languages; when editing subtitles, you can search online and then edit. The specific location can be found in the menu bar.
+
+Audio operations include follow-along reading, repeating a single sentence any number of times, repeating a single track any number of times, previous segment, next segment, repeat current segment, previous track, and next track.
+
+It includes tools for subtitle generation, subtitle editing, image format conversion, screen capture, screen recording, and audio recording. "Subtitle Editing" is located to the right of the microphone/speaker icon below (it's a text icon). The rest are in the menu bar.
+
+It also contains learning resources, including default resources. You can add your own resource URLs, but the default resources can only be set to display after viewing all the "Thinking" questions.
+
+**II. Detailed Instructions:**
+
+1.  **Menu Bar:** Click to view related content.
+2.  **Screen Hide Button:** Located in the left or right area.
+3.  **Add and Play Files:** Clicking the candidate list and playlist displays corresponding buttons. This functional distinction is not sufficiently detailed but is usable.
+    *   **(1) Add:** You can add an audio folder, but only a single-level parent folder. Multi-level folder functionality will be considered for future improvement.
+    *   **(2) Remove:** Select a folder to remove it.
+    *   **(3) Right-Click:** Reveals play and add functions. "Play this folder only" clears old files from the playlist, ensuring only the contents of that folder are played to avoid confusion. Use at your discretion.
+    *   **(4) Playlist Buttons:** Click to understand their functions.
+4.  **Media Display Area:**
+    In audio mode, this area primarily displays subtitles; in video mode, it displays the video.
+5.  **Subtitle Display Area:** Refer to the Media Display Area.
+6.  **Operation Buttons Area:**
+
+    *   **First Row:** Fast forward, rewind, and progress bar. Click to rewind or fast forward.
+    *   **Second Row (Left):** Previous track, Play/Pause, Stop, Next track. **(Right):** Sequential play, Single track loop, List loop.
+    *   **Third Row:**
+        *   **(1) Normal Mode/Follow-along Mode Button:** Displays a microphone in Follow-along mode (as shown above).
+        *   **(2) Subtitle Edit Button:** Allows editing subtitle times and content. The format must strictly correspond. Time format: Hour:Minute:Second Millisecond (1000 milliseconds = 1 second, so the millisecond part has 3 digits).
+        *   **(3) Mute Recording:** In Follow-along mode, check this to only play back without recording your voice.
+        *   **(4) Recognize Only (No Playback):** In Follow-along mode, check this to not play back your own follow-along audio, only display the recognition result.
+        *   **(5) Previous Segment:** Determined by the subtitle time segments. If segmented by sentence, it's the previous sentence. If a segment contains multiple sentences, it includes them all. Determined by the generated subtitle timings and subsequent manual adjustments.
+        *   **(6) Repeat Segment, Next Segment:** These are playback controls. Test to understand. Due to time constraints, these buttons might cause some usage errors. Overall usable, improvements to follow.
+    *   **Fourth Row:** Track Loop: Number of times to loop a single track (enter manually); Segment Loop: Number of times to loop a single segment during follow-along reading. Volume adjustment on the right.
+
+**III. Special Notes:**
+
+The learning resources contain dozens of shallow thoughts on education, history, and psychology. Please refer to them cautiously, do not take them as gospel, they are for reference only. If you find them lacking, feel free to contribute to improving and iterating them. If you are truly dissatisfied, you are welcome to iterate them yourself. The basic code version is provided on the open-source site, so you don't need to start from scratch. However, note that publishing requires the complete open-source code and commercial use is prohibited. Refer to the user agreement and the licenses of the open-source libraries used. This software's license only covers its own code, not the open-source libraries. All usage must comply with the licenses of the open-source libraries.
+
+**IV. Speech Recognition Model Notes:**
+
+Uses OpenAI's open-source language model Whisper, default is the 'base' version. For higher accuracy, download other versions yourself. Larger models (larger file size) are generally more reliable, but the 'base' version is sufficient for English. Inaccurate recognition is often due to needing more practice with pronunciation, not software flaws. Don't demand perfection in your accent; being understood and communicating is key. Foreigners speaking Chinese often have noticeable accents; nobody is perfect, some habits are hard to change. This software is unrelated to OpenAI; it merely uses its model. All users must comply with its usage agreement and refrain from any violations or illegal acts; responsibility lies solely with the user.
+
+**V. Translation API Notes:**
+
+Currently, only the Baidu API has been tested for translation. You need to register on the Baidu Translate API website to get a free usage quota. Other companies' APIs require self-testing as internal code support is uncertain. This software is unrelated to Baidu; it merely uses its API. All users must comply with Baidu's API usage agreement and refrain from any violations or illegal acts; responsibility lies solely with the user.
+
+**VI. Screen Capture, Screen Recording, Audio Recording Functions:**
+
+Explore their uses yourself. The audio recognition function on this page might not work correctly currently; improvements are considered for version 0.1.0. Page colors cannot be customized yet. If needed, iterate yourself or wait for future versions.
+
+**VII. Additional Shallow Thinking Questions:**
+
+1.  Would you prefer the people you care about to encounter teachers who dare to be ignorant and cowardly, or teachers who are happy to pursue wisdom and courage?
+2.  When the people you care about make mistakes, would you prefer they encounter wise, brave, and sincere people, or ignorant, cowardly, and hypocritical people?
+3.  How can we ensure that the people we care about always encounter more wise, brave, and sincere people when they make mistakes? Is disseminating advanced educational concepts and methods, and conducting comprehensive education, training, practice, and drills the best way?
+4.  By having seemingly hopeless individuals learn brain science, psychology, and programming, thereby enhancing the cognitive and thinking abilities of their children and grandchildren, can this indirectly improve the environment and the people encountered by those we care about?
+5.  When wishing well for those you care about, consider looking ahead 50, 100, 1000, 10000 years. Maybe nothing can be changed, but life is short. Shouldn't we do a little more for those we care about? Otherwise, how can we claim to truly care? Changing oneself is hard, changing others is harder, but this isn't a reason to let things slide, give up, and allow those we care about to potentially fall into trouble someday.
+
+---
+
+Okay, here is the English translation of the text you provided:
+
+---
+
+**【Main Features】**
+
+*   **Audio and Video Playback:** Please prepare your own audio and video files. Various formats are supported, but currently only MP3, WAV, and MP4 have been tested.
+*   **Synchronized Subtitle Display:** Please prepare your own subtitles. A subtitle generation tool is available, but timecodes require manual debugging via the built-in editing interface.
+*   **Follow-along Practice Mode:** Includes speech recognition functionality, currently using OpenAI's Whisper model. The 'tiny' version is built-in; other versions can be downloaded from the developer's cloud drive. The 'base' model recognizes standard English speech very well; more practice is needed if pronunciation is inaccurate.
+*   **Speech Recognition Scoring**
+*   **Learning Resource Management:** Allows you to add important learning resource websites yourself.
+*   **Other Features:** Please explore other features yourself.
+
+*   **Goal:** Aims to empower every sincere and friendly individual willing to learn and strive for those they care about, helping them build an environment of wisdom, courage, sincerity, friendliness, health, and happiness for their loved ones.
+
+**【Installation Method】:**
+
+*   Download the .exe file and the complete `_internal` folder to your desired directory.
+*   Scan for viruses yourself—but be cautious of false positives.
+*   After confirming it's safe, double-click the .exe file to run, or right-click and 'Run as administrator'. Administrator rights are required for full functionality.
+*   The developer promises never to intentionally inject any viruses or other malicious code into the software.
+*   However, due to limited capabilities, absolute prevention against viruses on the computer or from the network cannot be guaranteed. Therefore, perform your own scans and be wary of false positives.
+*   Python programs are often mistakenly reported as viruses. Only download directly from the developer's cloud drive to reduce risks. When sharing, only share the developer's cloud drive link.
+
+*   **Note 1:** After adding audio for the first time, clicking play might cause the program to exit unexpectedly. Relaunching should work. This is planned to be fixed in the next version.
+*   **Note 2:** Currently only supports audio/video files directly under a folder, not multi-level folder structures. This is planned to be fixed in the next version.
+
+**【How to Use】**
+
+I.  For windows without a close button, click outside the window to close it automatically.
+II. You can switch audio models yourself (using OpenAI's Whisper model).
+III. Translation primarily tested with Baidu's API; other providers are pending testing.
+IV. This software merely integrates products from certain brands and currently has no other affiliation with these brands. When using, you **must** comply with the usage principles of the respective products. The user is solely responsible for any violations. If APIs or models are adjusted, or the software becomes unusable for other reasons, the developer will consider fixing/adjusting it as soon as possible but makes no guarantees and is not liable for any losses. If hackers or others use this software for virus propagation, the developer promises to fully assist users and judicial units in investigation but assumes no liability for such incidents.
+
+V.  Customizing interface colors is not currently supported; this setting is planned for the next version. However, you can replace some button icons yourself (see the `icons` folder). Only PNG format is supported; you can capture images using the software's built-in image conversion tool. If an image is too large, you can first convert it to a large ICO icon, then convert that to PNG. **However, to prevent virus propagation, distributing any personal icons or files by placing them within the software for sharing is strictly prohibited.** Such distribution will be considered malicious commercial behavior, with compensation and reporting rewards clearly stated in the agreement. Only sharing the actual download link for this software is permitted.
+
+**【Supported Systems】**
+
+1.  Currently tested only on Windows 10. Windows 11 is expected to be supported but requires user testing.
+2.  Other operating systems can use a Windows 10 virtual machine. You need to enable 3D acceleration in the VM's display settings (tested successfully on Win10 VMs).
+
+**【Additional Question】**
+
+Should one strive to surround oneself and loved ones with wise, brave, sincere, and friendly people, or with ignorant and cunning ones? How can this be achieved?
+
+**【Software Updates】**
+
+Currently, new and old versions of the software are only stored on the developer's cloud drive. No automatic update feature is provided. Please check manually for updates.
+
+**【Uninstallation Steps】:**
+
+I.  Confirm which files you still need from the default screenshot/screen recording directory and copy/save them elsewhere. If you don't know the directory, open the screenshot tool to check the path. By default, it's usually a folder under your username in the system drive, often containing "player" in its name. You must check and confirm this yourself. If you have set a custom storage directory, it won't be cleared by default, but please copy/save files first just to be safe before proceeding.
+
+II. Open the software's main interface, go to the "Settings" page. Click "Clear All Configurations". This button is more thorough than "Clear Temp Files" and will erase all configurations. However, you should manually check your configured API accounts to ensure they are cleared and prevent potential misuse if forgotten.
+
+III. Delete the software's .exe file and the adjacent `_internal` folder from the directory where you run it. **Note:** Avoid storing other personal files in this same directory level to prevent accidental deletion.
+
+IV. After deletion, run a system cleaning utility for good measure.
+
+---
